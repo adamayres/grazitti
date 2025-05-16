@@ -1,6 +1,6 @@
 const searchElementSelector = '[data-testid="SpotlightSearchIcon.Icon"]';
 const searchElementWithEventSelector = '[data-grazittisearch="true"]';
-const compiledReactAppScriptUrl = 'https://rawcdn.githack.com/adamayres/grazitti/refs/heads/main/dist/assets/index-93dVIZX0.js';
+const compiledReactAppScriptUrl = 'https://rawcdn.githack.com/adamayres/grazitti/eb738f0405021bce69f64ab959ec1cc1414352a1/dist/assets/index-BDQj9t_8.js';
 const grazittiAppRootId = 'gz-app-root';
 const searchOpenEventName = 'gz-search-open';
 const onAppLoadedEvents = [];
@@ -74,7 +74,7 @@ async function clickHandler(event) {
   getOrCreateCustomReactAppRoot();
 
   // Add the custom react search component
-  await addScriptLink(compiledReactAppScriptUrl, 'gz-app');
+  // await addScriptLink(compiledReactAppScriptUrl, 'gz-app');
 
   // Dispatch a custom event that can be used by the custom react component to know when to open
   function callback() {
@@ -151,6 +151,6 @@ function applyCustomAppRootLoadedObserver() {
 }
 
 addSearchIconClickHandler();
-applyPageObserver();
-getOrCreateCustomReactAppRoot();
 applyCustomAppRootLoadedObserver();
+applyPageObserver();
+// getOrCreateCustomReactAppRoot();
